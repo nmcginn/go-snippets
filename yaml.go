@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"log"
 )
 
-func main() {
+func ReadYaml() string {
 	var y map[string]interface{}
 	data, err := ioutil.ReadFile("data/example.yml")
 	if err != nil {
@@ -16,6 +15,6 @@ func main() {
 	if err := yaml.Unmarshal(data, &y); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(y["item"].(string))
+	return y["item"].(string)
 }
 
