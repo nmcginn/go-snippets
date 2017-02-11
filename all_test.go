@@ -11,6 +11,14 @@ func TestJson(t *testing.T) {
 	}
 }
 
+func TestReverse(t *testing.T) {
+	test_string := "my string"
+	reversed := ReverseString(test_string)
+	if reversed != "gnirts ym" {
+		t.Error("String was not reversed correctly.")
+	}
+}
+
 func TestYaml(t *testing.T) {
 	str := ReadYaml()
 	if str != "somedata" {
