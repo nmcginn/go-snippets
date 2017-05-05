@@ -1,4 +1,4 @@
 package: github.com/odstderek/go-snippets
 import:
 - package: gopkg.in/yaml.v2
-- package: ioutil
+- package: github.com/valyala/fasthttp
