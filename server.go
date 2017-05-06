@@ -6,10 +6,11 @@ import (
 )
 
 func httpHandler(ctx *fasthttp.RequestCtx) {
-	fmt.Fprintf(ctx, "%q", ctx.RequestURI())
+	fmt.Fprint(ctx, "Hello, World!")
 }
 
 func main() {
+	fmt.Println("HTTP server starting on port 8080.")
 	fasthttp.ListenAndServe(":8080", httpHandler)
 }
 
